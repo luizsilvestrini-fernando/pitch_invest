@@ -5,12 +5,12 @@ set -euo pipefail
 #  PUBLISH NOW — DRIVA Investor Pitch
 #  One-click publish to GitHub + GitHub Pages (sem perguntas)
 #  Author:  luizsilvestrini-fernando
-#  Repo:    pitch_driva
+#  Repo:    pitch_invest
 #  Visibility: PUBLIC (GitHub Pages free)
 # ============================================================
 
 GH_USER="luizsilvestrini-fernando"
-GH_REPO="pitch_driva"
+GH_REPO="pitch_invest"
 VISIBILITY="--public"   # altere para --private se sua conta for Pro
 BRANCH="main"
 
