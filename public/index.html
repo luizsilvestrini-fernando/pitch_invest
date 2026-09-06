@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRIVA | Democratizing Car Rental in Brazil — Business Plan & Investor Deck (2026–2028)</title>
+  <meta name="description" content="DRIVA: The Decentralized Peer-to-Peer Car Sharing & Trust Infrastructure in Brazil. Official Business Plan 2026-2028 with ABLA 2026 market data and São Paulo MVP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @media (max-width: 900px) {
+      .five-card-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 520px) {
+      .five-card-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body class="deck-body">
+  <!-- Top Global Header -->
+  <header class="deck-header" id="deck-header">
+    <div class="brand-container">
+      <img src="assets/driva_logo_white.png" alt="Driva" class="brand-logo-img">
+      <span class="brand-tagline-badge">Democratizing Car Rental in Brazil</span>
+    </div>
+
+    <div class="deck-controls">
+      <button class="control-btn" id="btn-demo" title="Jump to Interactive Mobile Simulator" onclick="openSimulator('guest')">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="5" y="2" width="14" height="20" rx="3" ry="3"/>
+          <line x1="12" y1="18" x2="12.01" y2="18"/>
+        </svg>
+        <span>Interactive Demo</span>
+      </button>
+
+      <button class="control-btn" id="btn-notes" title="Toggle Verbal Teleprompter / Speaker Notes" onclick="toggleNotes()">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+        <span>Speaker Script</span>
+      </button>
+
+      <div class="speech-timer-pill" id="speech-timer-container">
+        <span class="pulse-dot"></span>
+        <span id="speech-timer">00:00</span>
+        <button id="timer-reset-btn" title="Reset Timer" class="icon-tiny-btn">↺</button>
+      </div>
+
+      <button class="control-btn icon-only" id="btn-fullscreen" title="Toggle Fullscreen" onclick="toggleFullscreen()">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Slides Stage -->
+  <main class="deck-stage" id="deck-stage">
+
+    <!-- ==================== SLIDE 1: Platform Revolution in Brazil ==================== -->
+    <section class="slide active" id="slide-1">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">01 / PLATFORM REVOLUTION</span>
+          <h2 class="slide-headline">The Platform Revolution in Brazil</h2>
+          <p class="slide-description">Five Platforms That Unlocked Idle Assets & Democratized Access</p>
+        </div>
+
+        <div class="five-card-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1.5rem;">
+          <!-- Nubank -->
+          <div class="feature-card" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(138,5,190,0.4); border-top: 4px solid #8A05BE; border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="font-size: 1.8rem;">🏦</span>
+              <h4 style="font-size: 1rem; font-weight: 800; color: #FFF; margin: 0;">Nubank</h4>
+            </div>
+            <p style="font-size: 0.8rem; color: #94A3B8; line-height: 1.5; margin: 0;">Democratized banking • 90M+ customers • Eliminated fees • App-first experience</p>
+          </div>
+
+          <!-- Airbnb -->
+          <div class="feature-card" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,90,95,0.4); border-top: 4px solid #FF5A5F; border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="font-size: 1.8rem;">🏠</span>
+              <h4 style="font-size: 1rem; font-weight: 800; color: #FFF; margin: 0;">Airbnb</h4>
+            </div>
+            <p style="font-size: 0.8rem; color: #94A3B8; line-height: 1.5; margin: 0;">Unlocked 10M+ unused homes • Locals became hosts • Redefined travel stays • Asset-light model</p>
+          </div>
+
+          <!-- iFood -->
+          <div class="feature-card" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(234,29,44,0.4); border-top: 4px solid #EA1D2C; border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="font-size: 1.8rem;">🍔</span>
+              <h4 style="font-size: 1rem; font-weight: 800; color: #FFF; margin: 0;">iFood</h4>
+            </div>
+            <p style="font-size: 0.8rem; color: #94A3B8; line-height: 1.5; margin: 0;">Brazil's delivery leader • 300K+ restaurants • 15M+ daily orders • Logistics network</p>
+          </div>
+
+          <!-- Uber -->
+          <div class="feature-card" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(0,229,153,0.4); border-top: 4px solid #111827; border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="font-size: 1.8rem;">🚗</span>
+              <h4 style="font-size: 1rem; font-weight: 800; color: #00E599; margin: 0;">Uber</h4>
+            </div>
+            <p style="font-size: 0.8rem; color: #94A3B8; line-height: 1.5; margin: 0;">Transformed mobility • 6M+ monthly riders • Drivers earn flexibly • Dynamic pricing</p>
+          </div>
+
+          <!-- XP Investimentos -->
+          <div class="feature-card" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(10,140,75,0.4); border-top: 4px solid #0A8C4B; border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.6rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem;">
+              <span style="font-size: 1.8rem;">📈</span>
+              <h4 style="font-size: 1rem; font-weight: 800; color: #FFF; margin: 0;">XP Investimentos</h4>
+            </div>
+            <p style="font-size: 0.8rem; color: #94A3B8; line-height: 1.5; margin: 0;">Democratized investing • Broke market barriers • R$100 minimum entry • Education-first</p>
+          </div>
+        </div>
+
+        <div class="info-banner" style="margin-top: 1.75rem; background: rgba(0,229,153,0.06); border: 1px solid rgba(0,229,153,0.35); border-radius: 14px; padding: 1.25rem 1.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+            <span style="font-size: 0.72rem; font-weight: 800; color: #00E599; text-transform: uppercase; letter-spacing: 0.1em; background: rgba(0,229,153,0.12); padding: 0.25rem 0.6rem; border-radius: 6px; border: 1px solid rgba(0,229,153,0.3);">COMMON THREAD</span>
+          </div>
+          <p style="margin: 0; font-size: 0.95rem; color: #E2E8F0; line-height: 1.55; font-weight: 500;">
+            Each platform harnessed underutilized assets (money, homes, delivery capacity, time/cars, capital) and connected them with those who needed them — creating massive value from idle resources.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 2: Title & Vision ==================== -->
+    <section class="slide" id="slide-2">
+      <div class="slide-content-split">
+        <div class="slide-pane-text">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge" style="background: rgba(0,229,153,0.15); border-color: rgba(0,229,153,0.4); color: #00E599;">BUSINESS PLAN 2026–2028 • SEED TRANCHE US$ 150K</span>
+          </div>
+          <h1 class="slide-headline-hero">Democratizing Car Rental in Brazil</h1>
+          <p class="slide-subheadline">The Decentralized Peer-to-Peer Mobility & Trust Infrastructure</p>
+          
+          <div class="thesis-highlight-card" style="margin: 1.25rem 0; background: rgba(17,24,39,0.85); border: 1px solid rgba(0,229,153,0.3); border-radius: 12px; padding: 1rem 1.25rem;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: #00E599; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.35rem;">Core Investment Thesis</div>
+            <p style="font-size: 0.92rem; color: #F1F5F9; line-height: 1.5; font-style: italic;">
+              "Value is not just in brokering a daily rate. It is in creating a trust infrastructure that makes peer-to-peer rental possible at scale."
+            </p>
+          </div>
+
+          <div class="metrics-row-compact" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 1rem;">
+            <div class="metric-card-compact" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.75rem; text-align: center;">
+              <div style="font-size: 0.65rem; color: #94A3B8; font-weight: 700;">PILLAR 1</div>
+              <div style="font-size: 0.85rem; font-weight: 800; color: #FFF; margin-top: 0.2rem;">Distributed Supply</div>
+            </div>
+            <div class="metric-card-compact" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.75rem; text-align: center;">
+              <div style="font-size: 0.65rem; color: #94A3B8; font-weight: 700;">PILLAR 2</div>
+              <div style="font-size: 0.85rem; font-weight: 800; color: #00E599; margin-top: 0.2rem;">Trust by Design</div>
+            </div>
+            <div class="metric-card-compact" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.75rem; text-align: center;">
+              <div style="font-size: 0.65rem; color: #94A3B8; font-weight: 700;">PILLAR 3</div>
+              <div style="font-size: 0.85rem; font-weight: 800; color: #FFF; margin-top: 0.2rem;">Unit Economics</div>
+            </div>
+            <div class="metric-card-compact" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.75rem; text-align: center;">
+              <div style="font-size: 0.65rem; color: #94A3B8; font-weight: 700;">PILLAR 4</div>
+              <div style="font-size: 0.85rem; font-weight: 800; color: #FFF; margin-top: 0.2rem;">Local Liquidity</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-pane-visual">
+          <div class="brand-collage-frame">
+            <img src="assets/driva_brand_collage.png" alt="Driva Brand Showcase">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 3: Problem & Opportunity ==================== -->
+    <section class="slide" id="slide-3">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">03 / PROBLEM & OPPORTUNITY</span>
+          <h2 class="slide-headline">The Idle Asset & Inefficiencies of Traditional Mobility</h2>
+          <p class="slide-description">Private cars remain parked generating depreciation, insurance, and taxes, while renters face bureaucracy and abusive prices.</p>
+        </div>
+
+        <div class="comparison-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+          <div class="feature-card" style="background: rgba(17,24,39,0.8); border: 1px solid rgba(244,63,94,0.3); border-radius: 14px; padding: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <span style="background: rgba(244,63,94,0.15); color: #F43F5E; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.6rem; border-radius: 9999px;">OWNER (HOST)</span>
+              <h3 style="font-size: 1.15rem; color: #FFF;">Fixed Cost without Revenue</h3>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: #94A3B8; font-size: 0.88rem;">
+              <li>• <strong>Extreme Idleness</strong>: Private vehicles sit idle more than 90% to 95% of the time.</li>
+              <li>• <strong>Municipal Vehicle Rotation in SP</strong>: 20% of the fleet is prohibited from circulating during rush hours once a week, forcing hundreds of thousands of cars to be 100% idle.</li>
+              <li>• <strong>Relentless Costs</strong>: 4% IPVA, mandatory and private insurance, preventive maintenance, and garage (up to R$ 800/month).</li>
+              <li>• <strong>Fear of Sharing</strong>: Risk of theft, damage, fraud, and loss of control prevent informal transactions.</li>
+            </ul>
+          </div>
+
+          <div class="feature-card" style="background: rgba(17,24,39,0.8); border: 1px solid rgba(99,102,241,0.3); border-radius: 14px; padding: 1.5rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+              <span style="background: rgba(99,102,241,0.15); color: #818CF8; font-weight: 800; font-size: 0.75rem; padding: 0.3rem 0.6rem; border-radius: 9999px;">RENTER (GUEST)</span>
+              <h3 style="font-size: 1.15rem; color: #FFF;">Friction & Bureaucracy</h3>
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; color: #94A3B8; font-size: 0.88rem;">
+              <li>• <strong>Counter Lines</strong>: Wait of up to 45 minutes at airport agencies (Congonhas/Guarulhos).</li>
+              <li>• <strong>Lack of Real Choice</strong>: Rent "or similar" instead of the specific model desired.</li>
+              <li>• <strong>Unnecessary Travel</strong>: Need to go to distant agencies to pick up and return the car.</li>
+              <li>• <strong>Common Dilemma</strong>: Both parties need a <strong>trust infrastructure</strong> that guarantees prior inspection, protection, and secure payments.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 4: Market Benchmark (ABLA 2026) ==================== -->
+    <section class="slide" id="slide-4">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">04 / OFFICIAL MARKET</span>
+          <h2 class="slide-headline">The Brazilian Benchmark: ABLA 2026 Yearbook</h2>
+          <p class="slide-description">Traditional rental reached record scale in 2025 in Brazil, proving the economic habit of renting.</p>
+        </div>
+
+        <div class="stats-grid-quad" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin: 1.5rem 0;">
+          <div class="stat-box-hero" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(0,229,153,0.35); border-radius: 14px; padding: 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; font-weight: 900; color: #00E599; letter-spacing: -0.02em;">R$ 61,7 bi</div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: #FFF; margin-top: 0.35rem;">Revenue in 2025</div>
+            <div style="font-size: 0.72rem; color: #94A3B8; margin-top: 0.2rem;">Historical sector record (ABLA)</div>
+          </div>
+
+          <div class="stat-box-hero" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; font-weight: 900; color: #FFF; letter-spacing: -0.02em;">1.717.848</div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: #FFF; margin-top: 0.35rem;">Vehicles in Fleets</div>
+            <div style="font-size: 0.72rem; color: #94A3B8; margin-top: 0.2rem;">Automobiles and light commercial</div>
+          </div>
+
+          <div class="stat-box-hero" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; font-weight: 900; color: #FFF; letter-spacing: -0.02em;">37.047</div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: #FFF; margin-top: 0.35rem;">Active Rental Companies</div>
+            <div style="font-size: 0.72rem; color: #94A3B8; margin-top: 0.2rem;">Proven presence nationwide</div>
+          </div>
+
+          <div class="stat-box-hero" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.5rem; text-align: center;">
+            <div style="font-size: 2.2rem; font-weight: 900; color: #00E599; letter-spacing: -0.02em;">R$ 79,3 bi</div>
+            <div style="font-size: 0.85rem; font-weight: 700; color: #FFF; margin-top: 0.35rem;">Investment in Vehicles</div>
+            <div style="font-size: 0.72rem; color: #94A3B8; margin-top: 0.2rem;">Capital invested in new fleet (2025)</div>
+          </div>
+        </div>
+
+        <div class="info-banner" style="background: rgba(0,229,153,0.06); border: 1px solid rgba(0,229,153,0.25); border-radius: 12px; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+          <div>
+            <strong style="color: #00E599; font-size: 0.95rem;">The Supply Oasis in São Paulo (SENATRAN):</strong>
+            <span style="color: #E2E8F0; font-size: 0.88rem; margin-left: 0.5rem;">6.2M automobiles in the capital | <strong>3.6 Million are up to 10 years old (58% eligible)</strong>.</span>
+          </div>
+          <span style="background: #00E599; color: #0B0F19; font-weight: 800; font-size: 0.72rem; padding: 0.3rem 0.6rem; border-radius: 6px;">> 2X ENTIRE RENTAL FLEET</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 5: Personas ==================== -->
+    <section class="slide" id="slide-5">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">05 / TARGET PERSONAS</span>
+          <h2 class="slide-headline">Precise Supply and Demand Mapping</h2>
+          <p class="slide-description">We built specific products and incentives for the 4 fundamental profiles of the Driva ecosystem.</p>
+        </div>
+
+        <div class="personas-grid" style="margin-top: 1.5rem;">
+          <!-- Persona 1 -->
+          <div class="persona-card">
+            <span class="persona-role-badge host">URBAN HOST</span>
+            <div class="persona-name">Marcelo</div>
+            <div class="persona-meta">38 years old • São Paulo • Paid-off own car</div>
+            <div class="persona-trigger">Uses the car 2-3 days a week. Wants to offset ownership cost, but fears damage, theft, and misuse.</div>
+            <div class="persona-solution"><strong>Trigger & Solution</strong>: Extra income without losing control; flexible calendar, suggested price, Driva Check, full protection, and guaranteed payment.</div>
+          </div>
+
+          <!-- Persona 2 -->
+          <div class="persona-card">
+            <span class="persona-role-badge guest">OCCASIONAL RENTER</span>
+            <div class="persona-name">Juliana</div>
+            <div class="persona-meta">32 years old • Capital • No own car</div>
+            <div class="persona-trigger">Needs a car for weekend, short trip, event, or family need. Values proximity and simplicity.</div>
+            <div class="persona-solution"><strong>Trigger & Solution</strong>: Car in the neighborhood, transparent price, quick pickup, map search, instant booking, and human support.</div>
+          </div>
+
+          <!-- Persona 3 -->
+          <div class="persona-card">
+            <span class="persona-role-badge guest">RECURRENT USE</span>
+            <div class="persona-name">Renato</div>
+            <div class="persona-meta">41 years old • Metropolitan Region • Frequent Driver</div>
+            <div class="persona-trigger">Seeks vehicle for longer periods or recurrent work needs. Highly sensitive to price and mechanical reliability.</div>
+            <div class="persona-solution"><strong>Trigger & Solution</strong>: Clear total cost, predictable availability, filters by model, 24h assistance, and conditions for long rentals.</div>
+          </div>
+
+          <!-- Persona 4 -->
+          <div class="persona-card">
+            <span class="persona-role-badge host">MICRO-FLEET</span>
+            <div class="persona-name">Carla</div>
+            <div class="persona-meta">45 years old • Metropolitan Region • 2 to 5 Vehicles</div>
+            <div class="persona-trigger">Owns more than one vehicle and seeks high predictable occupancy rate. Leverages initial supply density in corridors.</div>
+            <div class="persona-solution"><strong>Trigger & Solution</strong>: Multi-vehicle management, consolidated financial dashboard, agile transfers, and lower operational effort.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 6: Trust by Design ==================== -->
+    <section class="slide" id="slide-6">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">06 / PRODUCT & ARCHITECTURE</span>
+          <h2 class="slide-headline">Trust by Design: The 6 Operational Modules</h2>
+          <p class="slide-description">Security is not post-processing, it is the core of Driva's technological architecture.</p>
+        </div>
+
+        <div class="trust-pillars-grid" style="margin-top: 1.25rem;">
+          <div class="trust-pillar-card">
+            <span class="trust-pillar-num">01</span>
+            <div class="trust-pillar-title">KYC + Biometric Driver License</div>
+            <div class="trust-pillar-desc">Automated identity validation with 3D facial biometrics and driver license validation in government databases in &lt;60s.</div>
+          </div>
+
+          <div class="trust-pillar-card">
+            <span class="trust-pillar-num">02</span>
+            <div class="trust-pillar-title">Vehicle Eligibility</div>
+            <div class="trust-pillar-desc">Regularized documentation, up to 10 years of manufacture, strict mileage control, and recall checks.</div>
+          </div>
+
+          <div class="trust-pillar-card highlight">
+            <span class="trust-pillar-num" style="color: #00E599;">03 • CORE INNOVATION</span>
+            <div class="trust-pillar-title" style="color: #00E599;">Driva Check</div>
+            <div class="trust-pillar-desc">Digital checklist before and after with guided photos, 360° video, odometer, fuel, tires, lights, and damage registration.</div>
+          </div>
+
+          <div class="trust-pillar-card">
+            <span class="trust-pillar-num">04</span>
+            <div class="trust-pillar-title">Protection + Assistance</div>
+            <div class="trust-pillar-desc">Dedicated vehicle insurance compatible with P2P (up to R$ 1M third-party) and 24h assistance without triggering the Host's personal policy.</div>
+          </div>
+
+          <div class="trust-pillar-card">
+            <span class="trust-pillar-num">05</span>
+            <div class="trust-pillar-title">Payment + Deposit</div>
+            <div class="trust-pillar-desc">Authenticated collection (Pix/Card), active anti-fraud, guarantee deposit pre-authorization, and scheduled transfer.</div>
+          </div>
+
+          <div class="trust-pillar-card">
+            <span class="trust-pillar-num">06</span>
+            <div class="trust-pillar-title">Reputation + Trust Score</div>
+            <div class="trust-pillar-desc">Algorithmic Vehicle Trust Score and continuous scoring of drivers and owners for retention of the best profiles.</div>
+          </div>
+        </div>
+
+        <div class="moat-equation-box">
+          POTENTIAL MOAT = LOCAL DENSITY + TRUST HISTORY + RISK OPERATION + INSPECTION DATA
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 7: Unit Economics Base ==================== -->
+    <section class="slide" id="slide-7">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">07 / BUSINESS MODEL</span>
+          <h2 class="slide-headline">Disciplined Unit Economics: Base Case</h2>
+          <p class="slide-description">Conservative planning hypothesis generating healthy contribution margin from the first booking.</p>
+        </div>
+
+        <div class="economics-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 1.5rem; margin-top: 1.5rem;">
+          <div class="table-frame" style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; overflow: hidden;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <thead>
+                <tr style="background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.1);">
+                  <th style="padding: 0.85rem 1.25rem; text-align: left; font-size: 0.8rem; color: #94A3B8;">ASSUMPTION</th>
+                  <th style="padding: 0.85rem 1.25rem; text-align: right; font-size: 0.8rem; color: #00E599;">BASE CASE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 0.85rem 1.25rem; font-size: 0.9rem; color: #E2E8F0;">Avg. Daily Rate</td>
+                  <td style="padding: 0.85rem 1.25rem; text-align: right; font-weight: 700; color: #FFF;">R$ 220,00</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 0.85rem 1.25rem; font-size: 0.9rem; color: #E2E8F0;">Avg. Duration</td>
+                  <td style="padding: 0.85rem 1.25rem; text-align: right; font-weight: 700; color: #FFF;">3,0 days</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,229,153,0.04);">
+                  <td style="padding: 0.85rem 1.25rem; font-size: 0.9rem; font-weight: 700; color: #FFF;">Avg. GBV / Booking</td>
+                  <td style="padding: 0.85rem 1.25rem; text-align: right; font-weight: 800; color: #00E599;">R$ 660,00</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 0.85rem 1.25rem; font-size: 0.9rem; color: #E2E8F0;">Driva Total Take Rate</td>
+                  <td style="padding: 0.85rem 1.25rem; text-align: right; font-weight: 700; color: #FFF;">22,0%</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 0.85rem 1.25rem; font-size: 0.9rem; color: #E2E8F0;">Driva Revenue / Booking</td>
+                  <td style="padding: 0.85rem 1.25rem; text-align: right; font-weight: 700; color: #FFF;">R$ 145,00</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                  <td style="padding: 0.85rem 1.25rem; font-size: 0.9rem; color: #94A3B8;">Variable Costs / Booking</td>
+                  <td style="padding: 0.85rem 1.25rem; text-align: right; font-weight: 700; color: #F43F5E;">(R$ 45,00)</td>
+                </tr>
+                <tr style="background: rgba(0,229,153,0.12);">
+                  <td style="padding: 1rem 1.25rem; font-size: 0.95rem; font-weight: 800; color: #00E599;">Contribution Margin (CM)</td>
+                  <td style="padding: 1rem 1.25rem; text-align: right; font-size: 1.15rem; font-weight: 900; color: #00E599;">R$ 100,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="background: linear-gradient(135deg, rgba(0,229,153,0.15), rgba(17,24,39,0.9)); border: 1px solid #00E599; border-radius: 14px; padding: 1.5rem; text-align: center;">
+              <div style="font-size: 0.75rem; font-weight: 800; color: #00E599; letter-spacing: 0.08em; text-transform: uppercase;">Contribution Margin</div>
+              <div style="font-size: 3rem; font-weight: 900; color: #FFF; margin: 0.25rem 0;">~69%</div>
+              <div style="font-size: 0.82rem; color: #94A3B8;">On the platform's net revenue</div>
+            </div>
+
+            <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 1.25rem;">
+              <div style="font-size: 0.8rem; font-weight: 700; color: #FFF; margin-bottom: 0.5rem;">Variable Cost Structure (R$ 45):</div>
+              <div style="font-size: 0.78rem; color: #94A3B8; line-height: 1.5;">
+                • R$ 18 — Card/Pix fees and anti-fraud gateway<br>
+                • R$ 15 — CNH validation APIs (Serpro) and biometrics<br>
+                • R$ 12 — Operational support and contingencies
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 8: Payback de Aquisição ==================== -->
+    <section class="slide" id="slide-8">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">08 / ACQUISITION PAYBACK</span>
+          <h2 class="slide-headline">Acquisition Payback: Fast Capital Return</h2>
+          <p class="slide-description">We monitor with discipline the two fundamental paybacks of the bilateral marketplace.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+          <!-- Payback Locatário -->
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(0,229,153,0.4); border-radius: 16px; padding: 2rem; position: relative; overflow: hidden;">
+            <div style="font-size: 0.75rem; font-weight: 800; color: #00E599; letter-spacing: 0.08em; text-transform: uppercase;">RENTER (GUEST) PAYBACK</div>
+            <div style="display: flex; align-items: baseline; gap: 0.5rem; margin: 1rem 0;">
+              <span style="font-size: 3.5rem; font-weight: 900; color: #FFF;">0.9</span>
+              <span style="font-size: 1.2rem; color: #00E599; font-weight: 700;">booking(s)</span>
+            </div>
+            <div style="font-size: 0.9rem; color: #E2E8F0; line-height: 1.5;">
+              <strong>Renter CAC of R$ 90</strong> amortized on the very first rental through the Contribution Margin of <strong>R$ 100/booking</strong>.
+            </div>
+            <div style="margin-top: 1.25rem; font-size: 0.78rem; color: #94A3B8; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.75rem;">
+              Governance Goal: Payback within <strong>2 bookings</strong>.
+            </div>
+          </div>
+
+          <!-- Payback Proprietário -->
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(99,102,241,0.4); border-radius: 16px; padding: 2rem; position: relative; overflow: hidden;">
+            <div style="font-size: 0.75rem; font-weight: 800; color: #818CF8; letter-spacing: 0.08em; text-transform: uppercase;">OWNER (HOST) PAYBACK</div>
+            <div style="display: flex; align-items: baseline; gap: 0.5rem; margin: 1rem 0;">
+              <span style="font-size: 3.5rem; font-weight: 900; color: #FFF;">1.2</span>
+              <span style="font-size: 1.2rem; color: #818CF8; font-weight: 700;">month(s)</span>
+            </div>
+            <div style="font-size: 0.9rem; color: #E2E8F0; line-height: 1.5;">
+              <strong>Owner CAC of R$ 180</strong> recovered in about <strong>36 days</strong> considering conservative frequency of 1.5 bookings/car/month.
+            </div>
+            <div style="margin-top: 1.25rem; font-size: 0.78rem; color: #94A3B8; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.75rem;">
+              Governance Goal: Payback within <strong>3 months</strong>.
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1rem 1.5rem; text-align: center; color: #94A3B8; font-size: 0.85rem;">
+          <strong style="color: #FFF;">Non-Negotiable Capital Rule:</strong> Should the renter payback exceed 2 bookings or the owner payback exceed 3 months, the channel is paused for immediate price and incentive review.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 9: Captação em Tranches ==================== -->
+    <section class="slide" id="slide-9">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">09 / FUNDRAISING & MILESTONES</span>
+          <h2 class="slide-headline">Fundraising in Conditioned Tranches</h2>
+          <p class="slide-description">Capital discipline: disbursements strictly linked to empirical validation of operational milestones.</p>
+        </div>
+
+        <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(0,229,153,0.3); border-radius: 14px; overflow: hidden; margin-top: 1.5rem;">
+          <table class="tranches-table">
+            <thead>
+              <tr>
+                <th>MILESTONE</th>
+                <th>TIMELINE</th>
+                <th>CAPITAL</th>
+                <th>VALIDATION GOALS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background: rgba(0,229,153,0.06);">
+                <td style="font-weight: 800; color: #00E599;">MVP Pilot</td>
+                <td>6 months</td>
+                <td style="font-weight: 800; color: #FFF;">US$ 150 mil <span style="font-size: 0.7rem; color: #94A3B8;">(~R$ 800k)</span></td>
+                <td><strong>1 city (São Paulo)</strong>; ~100 cars; 500-1,000 users; <strong>&gt;=100 rentals</strong>; validate risk, CAC, margin, and repurchase.</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: #FFF;">Local Scale</td>
+                <td>12 months</td>
+                <td style="font-weight: 700; color: #FFF;">US$ 250 mil <span style="font-size: 0.7rem; color: #94A3B8;">(~R$ 1,32M)</span></td>
+                <td><strong>3 to 5 cities</strong>; ~500 cars; ~5,000 users; <strong>&gt;=1,000 cumulative rentals</strong>; prove liquidity repeatability.</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700; color: #FFF;">Expansion</td>
+                <td>18 months</td>
+                <td style="font-weight: 700; color: #FFF;">US$ 500 mil <span style="font-size: 0.7rem; color: #94A3B8;">(~R$ 2,65M)</span></td>
+                <td><strong>~2,000 cars</strong>; ~20,000 users; up to 5,000 rentals/month strictly conditioned to approved unit economics.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.25rem; padding: 1rem 1.5rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;">
+          <span style="color: #94A3B8; font-size: 0.85rem;">Total Validation Cycle: <strong style="color: #FFF;">US$ 900 mil</strong></span>
+          <span style="color: #00E599; font-size: 0.85rem; font-weight: 700;">Planning exchange rate: R$ 5,30/US$</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 10: Go-to-Market ==================== -->
+    <section class="slide" id="slide-10">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">10 / GO-TO-MARKET</span>
+          <h2 class="slide-headline">The 5 Principles of Market Expansion</h2>
+          <p class="slide-description">Marketplace liquidity is achieved through extreme hyperlocal density.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1.5rem;">
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem;">
+            <div style="color: #00E599; font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">01</div>
+            <h4 style="font-size: 0.95rem; color: #FFF; margin-bottom: 0.5rem;">Density before Scale</h4>
+            <p style="font-size: 0.78rem; color: #94A3B8; line-height: 1.4;">Surgical focus on one pilot region and few high-liquidity neighborhoods in São Paulo.</p>
+          </div>
+
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem;">
+            <div style="color: #00E599; font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">02</div>
+            <h4 style="font-size: 0.95rem; color: #FFF; margin-bottom: 0.5rem;">Supply-Led Launch</h4>
+            <p style="font-size: 0.78rem; color: #94A3B8; line-height: 1.4;">Manual and rigorous recruitment of the first 100 owners to ensure high standards.</p>
+          </div>
+
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem;">
+            <div style="color: #00E599; font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">03</div>
+            <h4 style="font-size: 0.95rem; color: #FFF; margin-bottom: 0.5rem;">Demand Around Inventory</h4>
+            <p style="font-size: 0.78rem; color: #94A3B8; line-height: 1.4;">Media buying and demand attraction exclusively where active inventory already exists.</p>
+          </div>
+
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem;">
+            <div style="color: #00E599; font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">04</div>
+            <h4 style="font-size: 0.95rem; color: #FFF; margin-bottom: 0.5rem;">Referral Loop</h4>
+            <p style="font-size: 0.78rem; color: #94A3B8; line-height: 1.4;">Referral incentives strictly conditioned to first transaction completion.</p>
+          </div>
+
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem;">
+            <div style="color: #00E599; font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">05</div>
+            <h4 style="font-size: 0.95rem; color: #FFF; margin-bottom: 0.5rem;">Expand by Liquidity</h4>
+            <p style="font-size: 0.78rem; color: #94A3B8; line-height: 1.4;">Opening new region only after achieving prior conversion and availability targets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 11: Risk Matrix ==================== -->
+    <section class="slide" id="slide-11">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">11 / RISK MANAGEMENT</span>
+          <h2 class="slide-headline">Risk Matrix & Mitigations</h2>
+          <p class="slide-description">Robust contingency protocols for the main vectors of operational uncertainty.</p>
+        </div>
+
+        <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; overflow: hidden; margin-top: 1rem;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <thead>
+              <tr style="background: rgba(255,255,255,0.04); color: #94A3B8; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <th style="padding: 0.75rem 1rem;">RISK</th>
+                <th style="padding: 0.75rem 1rem;">IMPACT</th>
+                <th style="padding: 0.75rem 1rem;">DRIVA STRATEGIC MITIGATION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #FFF;">Mechanical Breakdown</td>
+                <td style="padding: 0.75rem 1rem; color: #F43F5E;">High</td>
+                <td style="padding: 0.75rem 1rem; color: #CBD5E1;">Eligibility (vehicles &lt;=10 years), inspection, 24h assistance, and contractual causality.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #FFF;">Damage / Accident</td>
+                <td style="padding: 0.75rem 1rem; color: #F43F5E;">High</td>
+                <td style="padding: 0.75rem 1rem; color: #CBD5E1;">Pre and post Driva Check, dedicated micro vehicle insurance, deductible/deposit, and fast regulation.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #FFF;">Fraud / Theft</td>
+                <td style="padding: 0.75rem 1rem; color: #F43F5E;">High</td>
+                <td style="padding: 0.75rem 1rem; color: #CBD5E1;">Biometric KYC with Serpro/Denatran validation, risk rules, and anti-jammer telemetry.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #FFF;">Low Liquidity</td>
+                <td style="padding: 0.75rem 1rem; color: #F43F5E;">High</td>
+                <td style="padding: 0.75rem 1rem; color: #CBD5E1;">Hyperlocal launch and initial income guarantee for the first 100 hosts in the corridor.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #FFF;">High CAC</td>
+                <td style="padding: 0.75rem 1rem; color: #F59E0B;">Medium / High</td>
+                <td style="padding: 0.75rem 1rem; color: #CBD5E1;">Transaction-conditioned referral, hyperlocal SEO, and strong organic traction by proximity.</td>
+              </tr>
+              <tr>
+                <td style="padding: 0.75rem 1rem; font-weight: 700; color: #FFF;">Regulatory</td>
+                <td style="padding: 0.75rem 1rem; color: #F43F5E;">High</td>
+                <td style="padding: 0.75rem 1rem; color: #CBD5E1;">Legal opinion based on Article 565 of the Civil Code (rental of things) and continuous review.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 12: North Star & Roadmap ==================== -->
+    <section class="slide" id="slide-12">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">12 / NORTH STAR & ROADMAP</span>
+          <h2 class="slide-headline">Our Guiding Metric and 18-Month Roadmap</h2>
+          <p class="slide-description">Total alignment of product, engineering, and operations around safe and perfect trips.</p>
+        </div>
+
+        <div class="north-star-hero" style="margin: 1rem 0;">
+          <div class="north-star-title">NORTH STAR METRIC</div>
+          <div class="north-star-metric">Completed Rentals without Serious Incident per Month</div>
+          <div class="north-star-subtitle">We optimize for trust, safety, and loyalty — not for speculative volume.</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.75rem; margin-top: 1rem;">
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.85rem;">
+            <div style="font-size: 0.7rem; color: #00E599; font-weight: 700;">0-30 DAYS</div>
+            <div style="font-size: 0.85rem; font-weight: 800; color: #FFF; margin: 0.2rem 0;">Discovery</div>
+            <div style="font-size: 0.75rem; color: #94A3B8;">100 interviews, legal opinions, insurers, landing page.</div>
+          </div>
+
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.85rem;">
+            <div style="font-size: 0.7rem; color: #00E599; font-weight: 700;">31-60 DAYS</div>
+            <div style="font-size: 0.85rem; font-weight: 800; color: #FFF; margin: 0.2rem 0;">Supply</div>
+            <div style="font-size: 0.75rem; color: #94A3B8;">30-50 pre-recruited cars, Driva Check v1, assisted concierge.</div>
+          </div>
+
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid #00E599; border-radius: 10px; padding: 0.85rem;">
+            <div style="font-size: 0.7rem; color: #00E599; font-weight: 700;">61-180 DAYS</div>
+            <div style="font-size: 0.85rem; font-weight: 800; color: #00E599; margin: 0.2rem 0;">MVP Pilot</div>
+            <div style="font-size: 0.75rem; color: #E2E8F0;">&gt;=100 rentals; validate real risk, CAC, margin, and repurchase.</div>
+          </div>
+
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.85rem;">
+            <div style="font-size: 0.7rem; color: #818CF8; font-weight: 700;">6-12 MONTHS</div>
+            <div style="font-size: 0.85rem; font-weight: 800; color: #FFF; margin: 0.2rem 0;">Local Scale</div>
+            <div style="font-size: 0.75rem; color: #94A3B8;">Full automation; 3-5 cities if metrics approve; 500 cars.</div>
+          </div>
+
+          <div style="background: rgba(17,24,39,0.85); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.85rem;">
+            <div style="font-size: 0.7rem; color: #818CF8; font-weight: 700;">12-18 MONTHS</div>
+            <div style="font-size: 0.85rem; font-weight: 800; color: #FFF; margin: 0.2rem 0;">Expansion</div>
+            <div style="font-size: 0.75rem; color: #94A3B8;">~2,000 cars; up to 5,000 rentals/month with proven unit economics.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 13: Plano de Ação 30 Dias ==================== -->
+    <section class="slide" id="slide-13">
+      <div class="slide-container">
+        <div class="slide-header-block">
+          <span class="slide-category-tag">13 / IMMEDIATE ACTION PLAN</span>
+          <h2 class="slide-headline">High-Velocity Deliveries: First 30 Days</h2>
+          <p class="slide-description">10 concrete steps to de-risk and prepare the operational launch.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">01.</strong> 50 interviews with owners + 50 with renters.
+            </div>
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">02.</strong> Define pilot city/neighborhoods and density criteria.
+            </div>
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">03.</strong> Legal opinion: P2P, liability, consumer, and LGPD.
+            </div>
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">04.</strong> Map insurers, 24h assistance, and anti-fraud.
+            </div>
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">05.</strong> Test digital Driva Check on 20 cars.
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">06.</strong> Landing page + active waitlist on both sides.
+            </div>
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">07.</strong> Pre-recruit 30 to 50 qualified cars.
+            </div>
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">08.</strong> Define pricing and experimental take rate.
+            </div>
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">09.</strong> Run assisted bookings and measure the conversion funnel.
+            </div>
+            <div style="background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; padding: 0.75rem 1rem; font-size: 0.82rem; color: #E2E8F0;">
+              <strong style="color: #00E599;">10.</strong> Recalibrate break-even, paybacks, and tranches with real data.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SLIDE 14: Investor Case & Call to Action ==================== -->
+    <section class="slide" id="slide-14">
+      <div class="slide-content-split">
+        <div class="slide-pane-text">
+          <div class="slide-badge-wrapper">
+            <span class="slide-badge" style="background: rgba(0,229,153,0.15); color: #00E599; border-color: rgba(0,229,153,0.4);">INVESTOR CASE • DRIVA 2026–2028</span>
+          </div>
+          <h2 class="slide-headline">The Trust Infrastructure for Shared Mobility</h2>
+          
+          <div style="margin: 1.25rem 0; font-size: 0.9rem; color: #CBD5E1; line-height: 1.5;">
+            Before a larger round, our US$ 150k pilot will empirically prove:
+            <ul style="list-style: none; margin-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li>• <strong style="color: #FFF;">Real and engaged supply</strong> with fast neighborhood onboarding;</li>
+              <li>• <strong style="color: #FFF;">User willingness to pay</strong> for counter-free convenience;</li>
+              <li>• <strong style="color: #FFF;">Controllable incidents</strong> through Driva Check and biometrics;</li>
+              <li>• <strong style="color: #FFF;">CAC with ultra-short payback</strong> (0.9 booking for the renter);</li>
+              <li>• <strong style="color: #FFF;">Healthy contribution margin (~69%)</strong> and consistent repurchase.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+            <button class="primary-action-btn" onclick="openSimulator('guest')" style="background: #00E599; color: #0B0F19; font-weight: 800; border: none; padding: 0.85rem 1.5rem; border-radius: 10px; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+              <span>Try the App Simulator</span>
+              <span>→</span>
+            </button>
+            <button class="secondary-action-btn" onclick="goToSlide(1)" style="background: rgba(255,255,255,0.06); color: #FFF; font-weight: 700; border: 1px solid rgba(255,255,255,0.15); padding: 0.85rem 1.25rem; border-radius: 10px; cursor: pointer;">
+              Restart Presentation
+            </button>
+          </div>
+        </div>
+
+        <div class="slide-pane-visual">
+          <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+            <img src="assets/driva_logo_full.png" alt="Driva Official Logo" style="max-width: 320px; width: 100%; object-fit: contain; background: #FFF; padding: 1rem; border-radius: 12px;">
+            <img src="assets/driva_app_icons.png" alt="App Icons" style="max-width: 320px; width: 100%; object-fit: contain; background: #FFF; padding: 0.5rem; border-radius: 12px;">
+            <div style="text-align: center; color: #94A3B8; font-size: 0.8rem; margin-top: 0.5rem;">
+              Driva Tecnologia da Mobilidade Ltda. • São Paulo, Brasil
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer Bar -->
+  <footer class="deck-footer" id="deck-footer">
+    <div class="slide-info">
+      <span id="slide-indicator">Slide 1 / 14</span>
+      <span class="divider">|</span>
+      <span id="slide-title-preview">Platform Revolution in Brazil</span>
+    </div>
+
+    <!-- Center Progress Dots -->
+    <div class="slide-dots" id="slide-dots"></div>
+
+    <div class="nav-buttons">
+      <button class="nav-btn prev-btn" id="prev-btn" title="Previous Slide (ArrowLeft)" onclick="prevSlide()">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        <span>Prev</span>
+      </button>
+
+      <button class="nav-btn next-btn" id="next-btn" title="Next Slide (ArrowRight)" onclick="nextSlide()">
+        <span>Next</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Teleprompter / Speaker Notes Side Panel -->
+  <aside class="speaker-notes-panel" id="speaker-notes-panel">
+    <div class="notes-header">
+      <div class="notes-title-group">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" y1="19" x2="12" y2="23"/>
+          <line x1="8" y1="23" x2="16" y2="23"/>
+        </svg>
+        <span>Verbal Pitch Script (English)</span>
+      </div>
+      <button class="notes-close-btn" onclick="toggleNotes()">✕</button>
+    </div>
+    <div class="notes-content" id="notes-content">
+      <!-- Injected dynamically per slide -->
+    </div>
+  </aside>
+
+  <!-- Interactive Mobile Simulator Modal -->
+  <div class="simulator-modal-backdrop" id="sim-modal-backdrop">
+    <div class="simulator-modal-content">
+      <button class="sim-modal-close" onclick="closeSimulatorModal()">✕</button>
+      
+      <!-- Interactive Mobile Phone Container -->
+      <div class="sim-phone-frame">
+        <div class="sim-phone-notch">
+          <div class="sim-phone-speaker"></div>
+          <div class="sim-phone-camera"></div>
+        </div>
+
+        <!-- Simulator Screen Header -->
+        <div class="sim-screen-header">
+          <div class="sim-status-bar">
+            <span>9:41</span>
+            <div style="display: flex; gap: 4px; align-items: center;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
+              <svg width="14" height="10" viewBox="0 0 24 24" fill="currentColor"><rect x="1" y="6" width="18" height="12" rx="2"/><path d="M23 10v4"/></svg>
+            </div>
+          </div>
+          
+          <div class="sim-brand-row" style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0.75rem;">
+            <img src="assets/driva_logo_white.png" alt="Driva" style="height: 22px; object-fit: contain;">
+            <span class="sim-tagline-badge" style="font-size: 0.65rem; color: #00E599; font-weight: 700;">INTERACTIVE DEMO</span>
+          </div>
+
+          <!-- Simulator Tab Switcher -->
+          <div class="sim-tabs-nav">
+            <button class="sim-tab active" id="sim-tab-guest" onclick="switchSimulatorTab('guest')">Rent (Guest)</button>
+            <button class="sim-tab" id="sim-tab-host" onclick="switchSimulatorTab('host')">Monetize (Host)</button>
+            <button class="sim-tab" id="sim-tab-insurance" onclick="switchSimulatorTab('insurance')">Insurance</button>
+            <button class="sim-tab" id="sim-tab-checkout" onclick="switchSimulatorTab('checkout')">Checkout</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Screen Content -->
+        <div class="sim-screen-viewport" id="sim-viewport">
+          <!-- Injected via JavaScript -->
+        </div>
+
+        <!-- Phone Home Indicator Bar -->
+        <div class="sim-phone-home-indicator"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

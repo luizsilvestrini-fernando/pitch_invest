@@ -1,0 +1,28 @@
+{
+  "name": "pitch_driva",
+  "version": "2.0.0",
+  "description": "DRIVA | Democratizing Car Rental in Brazil — Business Plan & Investor Deck (2026–2028) • 14 slides • English version",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "serve": "node server.js",
+    "serve:python": "cd public && python3 -m http.server 3456",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel",
+    "tunnel:public": "ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=30 -R 80:localhost:3456 nokey@localhost.run"
+  },
+  "keywords": [
+    "pitch",
+    "deck",
+    "driva",
+    "investor",
+    "business-plan",
+    "marketplace",
+    "p2p",
+    "car-sharing",
+    "brazil"
+  ],
+  "author": "Driva Tecnologia da Mobilidade Ltda.",
+  "license": "UNLICENSED"
+}
